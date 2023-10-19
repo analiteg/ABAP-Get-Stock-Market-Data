@@ -7,7 +7,8 @@ Model consists of 3 tables and 1 class.
 1. ZATICKER contains stock tickers.
 2. ZATICKERINF contains information about tickers from table 1.
 3. ZATICKERPR contains price and volume information for tickers from table 1.
-All methods for data manipulation are stored in local class. Global class contains commented code snippets for data gathering.
+   
+  All methods for data manipulation are stored in local class. Global class contains commented code snippets for data gathering.
 
 ## How to use.
 
