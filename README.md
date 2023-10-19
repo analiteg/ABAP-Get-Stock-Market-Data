@@ -12,7 +12,7 @@ Model consists of 3 tables and 1 class.
 
 ## How to use.
 
-1. Download this model via AbapGit to your package and open global class in Eclipse.
+Download this model via AbapGit to your package and open global class in Eclipse.
 2. Create a table of stock tickers. 
 3. Create an instance of class.
 4. Insert tickers into from table into db (zaticker).
