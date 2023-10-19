@@ -7,7 +7,10 @@ Model consists of 3 tables and 1 class.
 1. ZATICKER contains stock tickers.
 ![zatickeralt text](https://github.com/analiteg/stock_market_data/blob/main/img/zaticker.png)
 2. ZATICKERINF contains information about tickers from table 1.
+![zatickeralt text](https://github.com/analiteg/stock_market_data/blob/main/img/zatickerinf.png)
 3. ZATICKERPR contains price and volume information for tickers from table 1.
+
+![zatickeralt text](https://github.com/analiteg/stock_market_data/blob/main/img/zatickerpr.png)
    
   All methods for data manipulation are stored in local class. Global class contains commented code snippets for data gathering.
 
