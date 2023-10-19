@@ -65,3 +65,5 @@ DATA(mo_stocks) = lcl_stocks=>create_instance( ).
         out->write( exc->get_text( ) ).
     ENDTRY.
 ```
+
+Thats all! Have a fun!
