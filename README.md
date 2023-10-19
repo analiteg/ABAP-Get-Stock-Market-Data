@@ -29,7 +29,7 @@ Model consists of 3 tables and 1 class.
 ```abap
 DATA(mo_stocks) = lcl_stocks=>create_instance( ).
 ```
-3. Insert tickers into from table into db (zaticker).
+3. Insert tickers from table into db (zaticker).
 ```abap
     TRY.
         out->write( mo_stocks->insert_tickers( lt_tickers ) ).
@@ -37,7 +37,27 @@ DATA(mo_stocks) = lcl_stocks=>create_instance( ).
         out->write( exc->get_text( ) ).
     ENDTRY.
 ```
-4. Get business info of tickers and save it into db (zatickerinf). 
+4. Get business info of tickers and save it into db (zatickerinf).
+```abap
+    TRY.
+        out->write( mo_stocks->save_tickers_info_to_db( lt_tickers = mo_stocks->get_tickers_name( ) ) ).
+      CATCH cx_root INTO DATA(exc).
+        out->write( exc->get_text( ) ).
+    ENDTRY.
+```
 5. Get ticker's price and save it into db (zatickerpr).
+```abap   
+    TRY.
+        out->write( mo_stocks->save_ticker_price_into_db( lt_tickers = mo_stocks->get_ticker_name( ) ) ).
+      CATCH cx_root INTO DATA(exc).
+        out->write( exc->get_text( ) ).
+    ENDTRY.
+```
 6. Periodicaly update ticker's price and save it into db (zatickerpr).
-
+```abap
+    TRY.
+        out->write( mo_stocks->update_ticker_price_into_db( lt_tickers = mo_stocks->get_ticker_name( ) ) ).
+      CATCH cx_root INTO DATA(exc).
+        out->write( exc->get_text( ) ).
+    ENDTRY.
+```
