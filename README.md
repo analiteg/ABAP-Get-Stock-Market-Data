@@ -4,7 +4,7 @@ This data model has been created for educational purposes. All code is valid for
 Before using this model, register a FREE API KEY on https://polygon.io/  and put it on local class at line 57.
 
 Model consists of 3 tables and 1 class. 
-ZATICKER contains stock tickers.
+1. ZATICKER contains stock tickers.
 ZATICKERINF contains information about tickers from table 1.
 ZATICKERPR contains price and volume information for tickers from table 1.
 All methods for data manipulation are stored in local class. Global class contains commented code snippets for data gathering.
