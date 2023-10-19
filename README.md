@@ -16,16 +16,15 @@ Model consists of 3 tables and 1 class.
    
 1. Create a table of stock tickers.
 ```abap
-DATA lt_tickers TYPE STANDARD TABLE OF zaticker.
-   lt_tickers = VALUE #( ( ticker = 'AAPL' )
+    DATA lt_tickers TYPE STANDARD TABLE OF zaticker.
+    lt_tickers = VALUE #( ( ticker = 'AAPL' )
                           ( ticker = 'MSFT' )
-                         ( tic1ker = 'TSLA' )
-                         ( ticker = 'NVDA' )
+                          ( tic1ker = 'TSLA' )
+                          ( ticker = 'NVDA' )
                           ( ticker = 'META' )
                           ( ticker = 'NFLX' )
                           ( ticker = 'GOOGL' ) ).
-```abap
-
+```
 2. Create an instance of class.
 3. Insert tickers into from table into db (zaticker).
 4. Get business info of tickers and save it into db (zatickerinf). 
