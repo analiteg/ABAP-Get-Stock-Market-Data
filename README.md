@@ -14,10 +14,21 @@ Model consists of 3 tables and 1 class.
 
    Download this model via AbapGit to your package and open global class in Eclipse.
    
-2. Create a table of stock tickers. 
-3. Create an instance of class.
-4. Insert tickers into from table into db (zaticker).
-5. Get business info of tickers and save it into db (zatickerinf). 
-6. Get ticker's price and save it into db (zatickerpr).
-7. Periodicaly update ticker's price and save it into db (zatickerpr).
+1. Create a table of stock tickers.
+```abap
+DATA lt_tickers TYPE STANDARD TABLE OF zaticker.
+   lt_tickers = VALUE #( ( ticker = 'AAPL' )
+                          ( ticker = 'MSFT' )
+                         ( tic1ker = 'TSLA' )
+                         ( ticker = 'NVDA' )
+                          ( ticker = 'META' )
+                          ( ticker = 'NFLX' )
+                          ( ticker = 'GOOGL' ) ).
+```abap
+
+2. Create an instance of class.
+3. Insert tickers into from table into db (zaticker).
+4. Get business info of tickers and save it into db (zatickerinf). 
+5. Get ticker's price and save it into db (zatickerpr).
+6. Periodicaly update ticker's price and save it into db (zatickerpr).
 
