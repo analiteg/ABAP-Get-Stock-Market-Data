@@ -26,6 +26,9 @@ Model consists of 3 tables and 1 class.
                           ( ticker = 'GOOGL' ) ).
 ```
 2. Create an instance of class.
+```abap
+DATA(mo_stocks) = lcl_stocks=>create_instance( ).
+```
 3. Insert tickers into from table into db (zaticker).
 4. Get business info of tickers and save it into db (zatickerinf). 
 5. Get ticker's price and save it into db (zatickerpr).
