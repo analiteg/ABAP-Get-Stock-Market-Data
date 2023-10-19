@@ -54,7 +54,7 @@ CLASS lcl_stocks DEFINITION CREATE PRIVATE.
     CONSTANTS base_url_get_price TYPE string VALUE 'https://api.polygon.io/v2/aggs/ticker/'.
     CONSTANTS content_type       TYPE string VALUE 'Content-type'.
     CONSTANTS json_content       TYPE string VALUE 'application/json; charset=UTF-8'.
-    CONSTANTS co_apikey          TYPE string VALUE 'fdiO0J9lKjWfyY37dAYLJWZsz9QW9NpQ'.
+    CONSTANTS co_apikey          TYPE string VALUE 'Your FREE API KEY from https://polygon.io/'.
 ENDCLASS.
 
 
