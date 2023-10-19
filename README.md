@@ -19,7 +19,7 @@ Model consists of 3 tables and 1 class.
     DATA lt_tickers TYPE STANDARD TABLE OF zaticker.
     lt_tickers = VALUE #( ( ticker = 'AAPL' )
                           ( ticker = 'MSFT' )
-                          ( tic1ker = 'TSLA' )
+                          ( tic1ker = 'TSLA')
                           ( ticker = 'NVDA' )
                           ( ticker = 'META' )
                           ( ticker = 'NFLX' )
@@ -30,6 +30,13 @@ Model consists of 3 tables and 1 class.
 DATA(mo_stocks) = lcl_stocks=>create_instance( ).
 ```
 3. Insert tickers into from table into db (zaticker).
+```abap
+    TRY.
+        out->write( mo_stocks->insert_tickers( lt_tickers ) ).
+      CATCH cx_root INTO DATA(exc).
+        out->write( exc->get_text( ) ).
+    ENDTRY.
+```
 4. Get business info of tickers and save it into db (zatickerinf). 
 5. Get ticker's price and save it into db (zatickerpr).
 6. Periodicaly update ticker's price and save it into db (zatickerpr).
